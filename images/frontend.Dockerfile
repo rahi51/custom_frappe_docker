@@ -16,7 +16,7 @@ COPY --chown=frappe:frappe repos apps
 
 RUN bench setup requirements
 
-RUN bench build --production --verbose --hard-link
+RUN bench build --verbose --hard-link
 
 FROM frappe/frappe-nginx:${FRAPPE_VERSION}
 
